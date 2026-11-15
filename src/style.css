@@ -1,0 +1,266 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #252525;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --red: #e60012;
+  --dark-red: #bd0010;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #f8c5c9 0%, #fff 58%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.container {
+  width: min(900px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.site-header {
+  background: #fff;
+  border-bottom: 2px solid var(--red);
+}
+
+.navbar,
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  min-height: 64px;
+  justify-content: space-between;
+}
+
+.brand {
+  color: var(--red);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  gap: 20px;
+}
+
+.nav-links a {
+  padding: 8px 0;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--red);
+}
+
+.page-content {
+  padding-block: 48px;
+}
+
+.home-page,
+.about-page,
+.not-found {
+  padding-block: 48px;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  color: #222;
+}
+
+.home-page h1,
+.page-heading h1,
+.about-page h1,
+.not-found h1 {
+  margin-top: 0;
+  color: var(--red);
+}
+
+.home-page p,
+.about-page p {
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--red);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 150ms ease;
+}
+
+.button:hover {
+  background: var(--dark-red);
+}
+
+.catalog-page {
+  padding-top: 8px;
+}
+
+.page-heading {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.page-heading h1 {
+  margin-bottom: 0;
+}
+
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 20px;
+}
+
+.form-panel,
+.list-panel,
+.console-card {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 14px #0000000d;
+}
+
+.form-panel h2,
+.list-panel h2 {
+  margin-top: 0;
+}
+
+.form-field {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: var(--red);
+  outline: 2px solid #e6001225;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 4px 0 18px;
+  cursor: pointer;
+}
+
+.checkbox-field input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--red);
+}
+
+.submit-button {
+  width: 100%;
+}
+
+.error-message {
+  color: var(--dark-red);
+  font-weight: 700;
+}
+
+.empty-state {
+  color: #666;
+}
+
+.console-list {
+  display: grid;
+  gap: 12px;
+}
+
+.console-card {
+  padding: 14px;
+  box-shadow: none;
+}
+
+.console-card-top {
+  display: flex;
+  justify-content: space-between;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.console-card h3 {
+  margin: 10px 0 5px;
+}
+
+.console-manufacturer,
+.physical-status {
+  margin: 0;
+  color: #555;
+}
+
+.physical-status {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 620px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding-block: 13px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .page-content {
+    padding-block: 28px;
+  }
+
+  .catalog-layout {
+    grid-template-columns: 1fr;
+  }
+}
